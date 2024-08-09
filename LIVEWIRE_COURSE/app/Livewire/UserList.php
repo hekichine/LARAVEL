@@ -15,11 +15,15 @@ class UserList extends Component
     {
 //        dd($user);
     }
+    public function placeholder()
+    {
+        return view('placeholder');
+    }
     public function render()
     {
-
+        sleep(4);
         return view('livewire.user-list',[
-            'users'=>User::latest()->paginate(3)
+            'users'=>User::latest()->paginate(5)
         ]);
     }
 }
